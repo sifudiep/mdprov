@@ -1,0 +1,225 @@
+@import "./header";
+@import "./footer";
+@import "./typography";
+@import "./base";
+
+.home__container {
+    display: grid;
+    background-color: white;
+    grid-template-rows: 12rem 60rem 40rem 100rem 40rem 90rem 45rem 35rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:"header"
+                        "sectionOne"
+                        "sectionTwo"
+                        "sectionThree"
+                        "sectionFour"
+                        "sectionFive"
+                        "sectionSix"
+                        "footer";
+}
+
+.sectionOne {
+    display: grid;
+    grid-area: sectionOne;
+    row-gap: 1rem;
+    background-image: url("./img/sectionOne_background.jpg");
+    background-position: center;
+    background-size: cover;
+
+    grid-template-columns: minmax(min-content, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+    grid-template-rows: minmax(1.5rem, 4rem) minmax(1.5rem, 2rem) minmax(min-content, 5rem) minmax(1.5rem, 1fr) minmax(1.5rem, 1fr);
+    grid-template-areas:". . ."
+                        ". sectionOne__subhead ."
+                        ". sectionOne__title ."
+                        ". sectionOne__content ."
+                        ". . .";
+
+    &__subhead {
+        grid-area: sectionOne__subhead;
+        color: $second-main-color;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    &__title {
+        grid-area: sectionOne__title;
+        @include heading-1;
+        color: $second-main-color;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    &__content {
+        grid-area: sectionOne__content;
+        color: $second-main-color;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-size: 3rem;
+    }
+    
+}
+
+.sectionTwo {
+    display: grid;
+    grid-area: sectionTwo;
+    row-gap: 1rem;
+    background-color: $second-main-color;
+    grid-template-columns: minmax(4rem, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+    grid-template-rows: minmax(min-content, 2rem) minmax(min-content, 4rem) minmax(min-content, 11rem) minmax(1rem, 3rem);
+    grid-template-areas: ". . ."
+                         ". sectionTwo__title ."
+                         ". sectionTwo__content ."
+                         ". sectionTwo__contact-button .";
+
+    &__title {
+        grid-area: sectionTwo__title;
+        color: $third-main-color;
+        @include heading-1;
+    }
+
+    &__content {
+        grid-area: sectionTwo__content;
+        color: $third-main-color;
+
+    }
+
+    &__contact-button {
+        grid-area: sectionTwo__contact-button;
+        @include button;
+    }
+}
+
+.sectionThree {
+    display: grid;
+    grid-area: sectionThree;
+    background-color: beige;
+    row-gap: 3rem;
+    grid-template-columns: minmax(1rem, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+    grid-template-rows: minmax(min-content, 10rem) minmax(min-content, 10rem) minmax(min-content, max-content) minmax(min-content, 10rem) minmax(min-content, 10rem) minmax(min-content, 10rem);
+    grid-template-areas: ". . ."
+                         ". sectionThree__title ."
+                         ". sectionThree__img ."
+                         ". sectionThree__content ."
+                         ". sectionThree__sub-content .";
+
+    &__title {
+        grid-area: sectionThree__title;
+        @include heading-2;
+        color: $second-main-color;
+    }
+
+    &__img {
+        //media query : width - 80vw;
+        width: 100%;
+        grid-area: sectionThree__img;
+    }
+
+    &__content {
+        grid-area: sectionThree__content;
+    }
+
+    &__sub-content {
+        grid-area: sectionThree__sub-content;
+    }
+}
+
+.sectionFour {
+    display: grid;
+    grid-area: sectionFour;
+    background-color: $header-color;
+    row-gap: 2rem;
+    grid-template-columns: minmax(min-content, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+    grid-template-rows: minmax(min-content, 2rem) max-content max-content max-content;
+    grid-template-areas: ". . ."
+                         ". sectionFour__title ."
+                         ". sectionFour__content ."
+                         ". sectionFour__sub-content .";
+    
+    &__title {
+        grid-area: sectionFour__title;
+        @include heading-2;
+        color: $second-main-color;
+    }
+
+    &__content {
+        grid-area: sectionFour__content;
+    }
+
+    &__sub-content {
+        grid-area: sectionFour__sub-content;
+    }
+}
+
+.sectionFive {
+    display: grid;
+    background-color: $second-main-color;
+    grid-area: sectionFive;
+    row-gap: 2rem;
+    grid-template-columns: [start] minmax(min-content, 3vw) minmax(min-content, 12vw) minmax(min-content, 100rem) minmax(4rem, 1fr) [end];
+    grid-template-rows: 4rem 8rem 40rem max-content max-content max-content;
+    grid-template-areas: ". . . ."
+                         ". sectionFive__img sectionFive__img ."
+                         ". sectionFive__img sectionFive__img ."
+                         ". . sectionFive__title ."
+                         ". . sectionFive__content ."
+                         ". . sectionFive__contact-button .";
+
+    &__white-strip {
+        grid-column: start/end;
+        grid-row: 1/3;
+        background-color: white;
+    }
+
+    &__img {
+        grid-area: sectionFive__img;
+        background-image: url("./img/demo.png");
+        background-size: cover;
+        
+    }
+
+    &__title {
+        grid-area: sectionFive__title;
+        @include heading-2;
+        color: $third-main-color;
+    }
+
+    &__content {
+        grid-area: sectionFive__content;
+        color: $third-main-color;
+    }
+
+    &__contact-button {
+        grid-area: sectionFive__contact-button;
+        @include button;
+    }
+}
+
+.sectionSix {
+    display: grid;
+    background-color: beige;
+    grid-area: sectionSix;
+    row-gap: 1rem;
+    grid-template-columns: minmax(min-content, 3vw) minmax(min-content, 17vw) minmax(2rem, 4rem) minmax(min-content, 100rem) minmax(4rem, 1fr);
+    grid-template-rows: 4rem max-content max-content max-content max-content; 
+    grid-template-areas: ". . . . ."
+                         ". sectionSix__img . sectionSix__title ."
+                         ". sectionSix__img . sectionSix__content ."
+                         ". sectionSix__img . sectionSix__contact-button ."
+                         ". sectionSix__img . . .";
+
+    &__img {
+        grid-area: sectionSix__img;
+        width: 100%;
+    }
+
+    &__title {
+        grid-area: sectionSix__title;
+        @include heading-2;
+    }
+
+    &__content {
+        grid-area: sectionSix__content;
+    }
+
+    &__contact-button {
+        grid-area: sectionSix__contact-button;
+        @include button;
+    }
+}

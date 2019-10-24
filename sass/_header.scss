@@ -1,0 +1,26 @@
+@import "./typography";
+
+.header {
+    background-color: $header-color;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: minmax(4rem, 15vw) max-content minmax(4rem, 2fr)  max-content minmax(4rem, 1fr);
+    grid-template-areas: ". header__logo . header__contact .";
+
+    &__logo {
+        grid-area: header__logo;
+        display: flex;
+        align-items: center;
+        font-size: 5rem;
+        font-family: $font-header;
+    }
+
+    &__contact {
+        grid-area: header__contact;
+        color: $second-main-color;
+        font-family: $font-header;
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+    }
+}

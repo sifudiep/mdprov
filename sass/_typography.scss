@@ -1,0 +1,45 @@
+$font-primary: "Ubuntu", sans-serif;
+$font-header: 'Baloo Bhai', cursive;
+$header-color: #aaa3ff;
+
+$second-main-color : #b56969;
+$third-main-color: #e0fff7;
+$button-color: #965858;
+
+$boxShadow: 0.01rem 0.01rem 1rem 0 black;
+$boxShadow-elevate: 0.1rem 0.1rem 1rem 0 black;
+
+@mixin heading-1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-family: $font-header;
+}
+
+p {
+    font-size: 2rem;
+    font-family: $font-primary;
+}
+
+@mixin heading-2 {
+    font-size: 4rem;
+    font-family: $font-header;
+}
+
+@mixin button {
+    width: 13rem;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: $button-color;
+    border: none;
+    border-radius: 2rem;
+    color: $third-main-color;
+    &:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: $boxShadow;
+      }
+      &:active {
+        outline: none;
+        transform: translateY(0.25rem);
+      }
+}
+

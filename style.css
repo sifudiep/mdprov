@@ -1,0 +1,231 @@
+p {
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif; }
+
+.header {
+  background-color: #aaa3ff;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: minmax(4rem, 15vw) max-content minmax(4rem, 2fr) max-content minmax(4rem, 1fr);
+  grid-template-areas: ". header__logo . header__contact ."; }
+  .header__logo {
+    grid-area: header__logo;
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    font-family: "Baloo Bhai", cursive; }
+  .header__contact {
+    grid-area: header__contact;
+    color: #b56969;
+    font-family: "Baloo Bhai", cursive;
+    display: flex;
+    align-items: center;
+    font-size: 3rem; }
+
+.footer {
+  display: grid;
+  grid-area: footer; }
+
+p {
+  font-size: 2rem;
+  font-family: "Ubuntu", sans-serif; }
+
+body {
+  line-height: 1.2;
+  overflow-x: hidden;
+  font-weight: 300; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 40%; } }
+
+.home__container {
+  display: grid;
+  background-color: white;
+  grid-template-rows: 12rem 60rem 40rem 100rem 40rem 90rem 45rem 35rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "sectionOne" "sectionTwo" "sectionThree" "sectionFour" "sectionFive" "sectionSix" "footer"; }
+
+.sectionOne {
+  display: grid;
+  grid-area: sectionOne;
+  row-gap: 1rem;
+  background-image: url("./img/sectionOne_background.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-template-columns: minmax(min-content, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+  grid-template-rows: minmax(1.5rem, 4rem) minmax(1.5rem, 2rem) minmax(min-content, 5rem) minmax(1.5rem, 1fr) minmax(1.5rem, 1fr);
+  grid-template-areas: ". . ." ". sectionOne__subhead ." ". sectionOne__title ." ". sectionOne__content ." ". . ."; }
+  .sectionOne__subhead {
+    grid-area: sectionOne__subhead;
+    color: #b56969;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+  .sectionOne__title {
+    grid-area: sectionOne__title;
+    font-size: 6rem;
+    line-height: 1;
+    font-family: "Baloo Bhai", cursive;
+    color: #b56969;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+  .sectionOne__content {
+    grid-area: sectionOne__content;
+    color: #b56969;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-size: 3rem; }
+
+.sectionTwo {
+  display: grid;
+  grid-area: sectionTwo;
+  row-gap: 1rem;
+  background-color: #b56969;
+  grid-template-columns: minmax(4rem, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+  grid-template-rows: minmax(min-content, 2rem) minmax(min-content, 4rem) minmax(min-content, 11rem) minmax(1rem, 3rem);
+  grid-template-areas: ". . ." ". sectionTwo__title ." ". sectionTwo__content ." ". sectionTwo__contact-button ."; }
+  .sectionTwo__title {
+    grid-area: sectionTwo__title;
+    color: #e0fff7;
+    font-size: 6rem;
+    line-height: 1;
+    font-family: "Baloo Bhai", cursive; }
+  .sectionTwo__content {
+    grid-area: sectionTwo__content;
+    color: #e0fff7; }
+  .sectionTwo__contact-button {
+    grid-area: sectionTwo__contact-button;
+    width: 13rem;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: #965858;
+    border: none;
+    border-radius: 2rem;
+    color: #e0fff7; }
+    .sectionTwo__contact-button:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+    .sectionTwo__contact-button:active {
+      outline: none;
+      transform: translateY(0.25rem); }
+
+.sectionThree {
+  display: grid;
+  grid-area: sectionThree;
+  background-color: beige;
+  row-gap: 3rem;
+  grid-template-columns: minmax(1rem, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+  grid-template-rows: minmax(min-content, 10rem) minmax(min-content, 10rem) minmax(min-content, max-content) minmax(min-content, 10rem) minmax(min-content, 10rem) minmax(min-content, 10rem);
+  grid-template-areas: ". . ." ". sectionThree__title ." ". sectionThree__img ." ". sectionThree__content ." ". sectionThree__sub-content ."; }
+  .sectionThree__title {
+    grid-area: sectionThree__title;
+    font-size: 4rem;
+    font-family: "Baloo Bhai", cursive;
+    color: #b56969; }
+  .sectionThree__img {
+    width: 100%;
+    grid-area: sectionThree__img; }
+  .sectionThree__content {
+    grid-area: sectionThree__content; }
+  .sectionThree__sub-content {
+    grid-area: sectionThree__sub-content; }
+
+.sectionFour {
+  display: grid;
+  grid-area: sectionFour;
+  background-color: #aaa3ff;
+  row-gap: 2rem;
+  grid-template-columns: minmax(min-content, 15vw) minmax(min-content, 100rem) minmax(4rem, 1fr);
+  grid-template-rows: minmax(min-content, 2rem) max-content max-content max-content;
+  grid-template-areas: ". . ." ". sectionFour__title ." ". sectionFour__content ." ". sectionFour__sub-content ."; }
+  .sectionFour__title {
+    grid-area: sectionFour__title;
+    font-size: 4rem;
+    font-family: "Baloo Bhai", cursive;
+    color: #b56969; }
+  .sectionFour__content {
+    grid-area: sectionFour__content; }
+  .sectionFour__sub-content {
+    grid-area: sectionFour__sub-content; }
+
+.sectionFive {
+  display: grid;
+  background-color: #b56969;
+  grid-area: sectionFive;
+  row-gap: 2rem;
+  grid-template-columns: [start] minmax(min-content, 3vw) minmax(min-content, 12vw) minmax(min-content, 100rem) minmax(4rem, 1fr) [end];
+  grid-template-rows: 4rem 8rem 40rem max-content max-content max-content;
+  grid-template-areas: ". . . ." ". sectionFive__img sectionFive__img ." ". sectionFive__img sectionFive__img ." ". . sectionFive__title ." ". . sectionFive__content ." ". . sectionFive__contact-button ."; }
+  .sectionFive__white-strip {
+    grid-column: start/end;
+    grid-row: 1/3;
+    background-color: white; }
+  .sectionFive__img {
+    grid-area: sectionFive__img;
+    background-image: url("./img/demo.png");
+    background-size: cover; }
+  .sectionFive__title {
+    grid-area: sectionFive__title;
+    font-size: 4rem;
+    font-family: "Baloo Bhai", cursive;
+    color: #e0fff7; }
+  .sectionFive__content {
+    grid-area: sectionFive__content;
+    color: #e0fff7; }
+  .sectionFive__contact-button {
+    grid-area: sectionFive__contact-button;
+    width: 13rem;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: #965858;
+    border: none;
+    border-radius: 2rem;
+    color: #e0fff7; }
+    .sectionFive__contact-button:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+    .sectionFive__contact-button:active {
+      outline: none;
+      transform: translateY(0.25rem); }
+
+.sectionSix {
+  display: grid;
+  background-color: beige;
+  grid-area: sectionSix;
+  row-gap: 1rem;
+  grid-template-columns: minmax(min-content, 3vw) minmax(min-content, 17vw) minmax(2rem, 4rem) minmax(min-content, 100rem) minmax(4rem, 1fr);
+  grid-template-rows: 4rem max-content max-content max-content max-content;
+  grid-template-areas: ". . . . ." ". sectionSix__img . sectionSix__title ." ". sectionSix__img . sectionSix__content ." ". sectionSix__img . sectionSix__contact-button ." ". sectionSix__img . . ."; }
+  .sectionSix__img {
+    grid-area: sectionSix__img;
+    width: 100%; }
+  .sectionSix__title {
+    grid-area: sectionSix__title;
+    font-size: 4rem;
+    font-family: "Baloo Bhai", cursive; }
+  .sectionSix__content {
+    grid-area: sectionSix__content; }
+  .sectionSix__contact-button {
+    grid-area: sectionSix__contact-button;
+    width: 13rem;
+    height: 5rem;
+    font-size: 2rem;
+    background-color: #965858;
+    border: none;
+    border-radius: 2rem;
+    color: #e0fff7; }
+    .sectionSix__contact-button:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+    .sectionSix__contact-button:active {
+      outline: none;
+      transform: translateY(0.25rem); }
