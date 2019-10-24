@@ -24,7 +24,37 @@ p {
 
 .footer {
   display: grid;
-  grid-area: footer; }
+  grid-area: footer;
+  background-color: #af416b;
+  row-gap: 2rem;
+  grid-template-columns: minmax(min-content, 1fr) max-content minmax(min-content, 1fr);
+  grid-template-rows: 15% repeat(4, max-content);
+  grid-template-areas: ". . ." ". footer__title ." ". footer__content ." ". footer__email ." ". footer__social-media ."; }
+  .footer__title {
+    grid-area: footer__title;
+    font-size: 4rem;
+    font-family: "Baloo Bhai", cursive;
+    font-size: 2.5rem;
+    color: #e0fff7;
+    text-align: center; }
+  .footer__content {
+    grid-area: footer__content;
+    color: #e0fff7;
+    text-align: center; }
+  .footer__email {
+    grid-area: footer__email;
+    color: #e0fff7;
+    text-align: center; }
+  .footer__social-media {
+    grid-area: footer__social-media;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: max-content;
+    column-gap: 1rem;
+    justify-content: center; }
+  .footer__social-media li {
+    list-style-type: none;
+    font-size: 2rem; }
 
 p {
   font-size: 2rem;
@@ -54,7 +84,7 @@ html {
 .home__container {
   display: grid;
   background-color: white;
-  grid-template-rows: 12rem 60rem 40rem 100rem 40rem 90rem 45rem 35rem;
+  grid-template-rows: 12rem 60rem 40rem 100rem 40rem 95rem 45rem 35rem;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "sectionOne" "sectionTwo" "sectionThree" "sectionFour" "sectionFive" "sectionSix" "footer"; }
 
@@ -110,10 +140,10 @@ html {
     background-color: #965858;
     border: none;
     border-radius: 2rem;
-    color: #e0fff7; }
+    color: #e0fff7;
+    outline: none; }
     .sectionTwo__contact-button:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+      transform: translateY(-0.25rem); }
     .sectionTwo__contact-button:active {
       outline: none;
       transform: translateY(0.25rem); }
@@ -189,10 +219,10 @@ html {
     background-color: #965858;
     border: none;
     border-radius: 2rem;
-    color: #e0fff7; }
+    color: #e0fff7;
+    outline: none; }
     .sectionFive__contact-button:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+      transform: translateY(-0.25rem); }
     .sectionFive__contact-button:active {
       outline: none;
       transform: translateY(0.25rem); }
@@ -222,10 +252,10 @@ html {
     background-color: #965858;
     border: none;
     border-radius: 2rem;
-    color: #e0fff7; }
+    color: #e0fff7;
+    outline: none; }
     .sectionSix__contact-button:hover {
-      transform: translateY(-0.25rem);
-      box-shadow: 0.01rem 0.01rem 1rem 0 black; }
+      transform: translateY(-0.25rem); }
     .sectionSix__contact-button:active {
       outline: none;
       transform: translateY(0.25rem); }

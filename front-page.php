@@ -41,9 +41,6 @@
                 <p class="sectionSix__content">Storytelling är ett vanligt begrepp inom den moderna marknadsföringen. Den sätter fingret på behovet av att autensiera avsändaren och skapa genuin kontakt med dom hen vill nå. För oss är det dock uppenbart att din storytelling måste börja med att identifiera vad du ska berätta. Vi kallar det Storyfinding. Det är här journalistisk erfarenhet kommer i spel på allvar.</p>
                 <button class="sectionSix__contact-button">Kontakt</button>
             </section>
-            <footer class="footer">footer</footer>
-
-        </body>
     <?php
     get_footer();
 ?>
